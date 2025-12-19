@@ -248,5 +248,88 @@
       grid-template-columns: 1fr;
       gap: 50px;
     }
+
+    .contact-title {
+      font-size: 2rem;
+    }
+
+    .contact-form-wrapper {
+      padding: 35px 30px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .contact-grid {
+      gap: 40px;
+    }
+
+    .contact-title {
+      font-size: 1.7rem;
+    }
+
+    .contact-text {
+      font-size: 1rem;
+    }
+
+    .contact-methods {
+      gap: 20px;
+    }
+
+    .contact-method {
+      gap: 15px;
+    }
+
+    .method-icon {
+      font-size: 1.5rem;
+      padding: 12px;
+      border-radius: 12px;
+    }
+
+    .contact-method h4 {
+      font-size: 0.95rem;
+    }
+
+    .contact-method p,
+    .contact-method a {
+      font-size: 0.85rem;
+      word-break: break-word;
+    }
+
+    .social-links {
+      justify-content: center;
+      gap: 12px;
+    }
+
+    .social-link {
+      width: 45px;
+      height: 45px;
+    }
+
+    .contact-form-wrapper {
+      padding: 30px 20px;
+      border-radius: 20px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      padding: 12px 15px;
+      font-size: 0.95rem;
+    }
+
+    .form-group label {
+      font-size: 0.9rem;
+    }
+
+    .btn-full {
+      padding: 14px;
+      font-size: 0.95rem;
+    }
+  }
+
+  @media (max-width: 400px) {
+    .contact-form-wrapper {
+      padding: 25px 15px;
+    }
   }
 </style>

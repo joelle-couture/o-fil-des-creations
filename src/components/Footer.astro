@@ -178,15 +178,25 @@ const currentYear = new Date().getFullYear();
     font-size: 0.85rem !important;
   }
 
-  @media (max-width: 968px) {
+  @media (max-width: 1100px) {
     .footer-content {
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1.2fr 1fr 1fr 1.2fr;
+      gap: 35px;
     }
   }
 
-  @media (max-width: 600px) {
+  @media (max-width: 968px) {
+    .footer {
+      padding: 60px 0 25px;
+    }
+
     .footer-content {
-      grid-template-columns: 1fr;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+
+    .footer-brand {
+      grid-column: 1 / -1;
       text-align: center;
     }
 
@@ -194,8 +204,75 @@ const currentYear = new Date().getFullYear();
       justify-content: center;
     }
 
+    .footer-links h4,
+    .footer-newsletter h4 {
+      font-size: 1rem;
+      margin-bottom: 20px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .footer {
+      padding: 50px 0 20px;
+    }
+
+    .footer-content {
+      grid-template-columns: 1fr;
+      gap: 35px;
+      text-align: center;
+    }
+
+    .footer-logo {
+      justify-content: center;
+      font-size: 1.2rem;
+    }
+
+    .footer-logo-img {
+      width: 35px;
+      height: 35px;
+    }
+
+    .footer-description {
+      font-size: 0.9rem;
+    }
+
+    .footer-links ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px 20px;
+    }
+
+    .footer-links li {
+      margin-bottom: 0;
+    }
+
     .newsletter-form {
       flex-direction: column;
+      gap: 12px;
+    }
+
+    .newsletter-form input {
+      text-align: center;
+    }
+
+    .newsletter-form .btn {
+      width: 100%;
+    }
+
+    .footer-bottom {
+      padding-top: 25px;
+    }
+
+    .footer-bottom p {
+      font-size: 0.8rem;
+    }
+  }
+
+  @media (max-width: 400px) {
+    .footer-logo {
+      flex-direction: column;
+      gap: 8px;
     }
   }
 </style>

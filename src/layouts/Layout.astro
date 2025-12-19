@@ -127,13 +127,51 @@ const { title, description = "O fil des créations by Joëlle - Créations coutu
     margin: 0 auto 60px;
   }
 
+  @media (max-width: 1024px) {
+    .container {
+      padding: 0 30px;
+    }
+
+    .section {
+      padding: 80px 0;
+    }
+
+    .section-title {
+      font-size: 2.2rem;
+    }
+  }
+
   @media (max-width: 768px) {
+    .container {
+      padding: 0 20px;
+    }
+
     .section {
       padding: 60px 0;
     }
 
     .section-title {
-      font-size: 2rem;
+      font-size: 1.8rem;
+    }
+
+    .section-subtitle {
+      font-size: 1rem;
+      margin-bottom: 40px;
+    }
+
+    .btn {
+      padding: 12px 24px;
+      font-size: 0.9rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .section {
+      padding: 50px 0;
+    }
+
+    .section-title {
+      font-size: 1.6rem;
     }
   }
 </style>

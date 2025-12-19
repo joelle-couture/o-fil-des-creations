@@ -194,19 +194,106 @@
     font-size: 0.95rem;
   }
 
-  @media (max-width: 968px) {
+  @media (max-width: 1100px) {
     .about-grid {
-      grid-template-columns: 1fr;
       gap: 50px;
     }
 
+    .about-title {
+      font-size: 2.2rem;
+    }
+  }
+
+  @media (max-width: 968px) {
+    .about-grid {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+
     .about-image {
-      max-width: 400px;
+      max-width: 350px;
       margin: 0 auto;
     }
 
     .about-placeholder {
-      height: 350px;
+      height: 320px;
+    }
+
+    .about-title {
+      font-size: 2rem;
+    }
+
+    .about-text {
+      font-size: 1rem;
+    }
+
+    .experience-badge {
+      padding: 20px;
+      right: -10px;
+      bottom: -15px;
+    }
+
+    .exp-number {
+      font-size: 1.1rem;
+    }
+
+    .exp-text {
+      font-size: 0.8rem;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .about-image {
+      max-width: 100%;
+    }
+
+    .about-placeholder {
+      height: 280px;
+      border-radius: 15px;
+    }
+
+    .image-frame::before {
+      top: 12px;
+      left: 12px;
+      border-radius: 15px;
+    }
+
+    .about-title {
+      font-size: 1.7rem;
+    }
+
+    .about-text {
+      font-size: 0.95rem;
+      margin-bottom: 15px;
+    }
+
+    .about-features {
+      margin-top: 30px;
+      gap: 20px;
+    }
+
+    .feature {
+      gap: 15px;
+    }
+
+    .feature-icon {
+      font-size: 1.6rem;
+      padding: 12px;
+      border-radius: 12px;
+      flex-shrink: 0;
+    }
+
+    .feature h4 {
+      font-size: 1rem;
+    }
+
+    .feature p {
+      font-size: 0.9rem;
+    }
+
+    .experience-badge {
+      padding: 15px;
+      border-radius: 15px;
     }
   }
 </style>

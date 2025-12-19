@@ -228,26 +228,91 @@ const services = [
     .services-grid {
       grid-template-columns: repeat(2, 1fr);
     }
+
+    .process-section {
+      padding: 50px 40px;
+    }
   }
 
   @media (max-width: 768px) {
     .services-grid {
       grid-template-columns: 1fr;
+      gap: 25px;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    .service-card {
+      padding: 30px 25px;
     }
 
     .process-section {
-      padding: 40px 20px;
+      padding: 40px 25px;
+      border-radius: 20px;
+      margin-top: 60px;
+    }
+
+    .process-title {
+      font-size: 1.7rem;
+      margin-bottom: 40px;
     }
 
     .process-steps {
       flex-direction: column;
       align-items: center;
+      gap: 0;
+    }
+
+    .step {
+      max-width: 280px;
     }
 
     .step-line {
       width: 2px;
-      height: 30px;
-      margin: 0;
+      height: 25px;
+      margin: 15px 0;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .service-card {
+      padding: 25px 20px;
+      border-radius: 15px;
+    }
+
+    .service-icon {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+    }
+
+    .service-title {
+      font-size: 1.2rem;
+    }
+
+    .service-description {
+      font-size: 0.9rem;
+    }
+
+    .process-section {
+      padding: 30px 20px;
+    }
+
+    .process-title {
+      font-size: 1.5rem;
+    }
+
+    .step-number {
+      width: 45px;
+      height: 45px;
+      font-size: 1.1rem;
+    }
+
+    .step h4 {
+      font-size: 1rem;
+    }
+
+    .step p {
+      font-size: 0.85rem;
     }
   }
 </style>
