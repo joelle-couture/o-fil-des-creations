@@ -217,6 +217,31 @@ const categories = ["Tous", "Accessoires", "Décoration", "Cuisine"];
     margin-bottom: 25px;
   }
 
+  .social-links {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+  }
+
+  .social-link {
+    width: 50px;
+    height: 50px;
+    background: var(--secondary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow);
+  }
+
+  .social-link:hover {
+    background: var(--primary);
+    color: var(--white);
+    transform: translateY(-3px);
+  }
+
   .gallery-cta-buttons {
     display: flex;
     gap: 15px;
