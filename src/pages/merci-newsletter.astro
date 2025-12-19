@@ -17,17 +17,25 @@ import Footer from '../components/Footer.astro';
 				<p class="subtext">
 					Vous recevrez les dernières nouvelles de mes créations directement dans votre boîte mail.
 				</p>
+				
+				<div class="social-links">
+					<a href="https://www.facebook.com/ofildescreationsdejoelle/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Facebook">
+						<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+							<path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+						</svg>
+					</a>
+					<a href="https://www.instagram.com/o_fil_des_creations_de_joelle/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
+						<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+							<rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="2"/>
+							<path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" fill="none" stroke="currentColor" stroke-width="2"/>
+							<line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+						</svg>
+					</a>
+				</div>
+
 				<div class="thank-you-buttons">
 					<a href="/" class="btn btn-primary">Retour à l'accueil</a>
 				</div>
-                <div class="thanks-you-buttons">
-                    <a href="https://www.facebook.com/ofildescreationsdejoelle/" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
-						Facebook
-					</a>
-					<a href="https://www.instagram.com/o_fil_des_creations_de_joelle/" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
-						Instagram
-					</a>
-                </div>
 			</div>
 		</div>
 	</main>
@@ -75,7 +83,33 @@ import Footer from '../components/Footer.astro';
 
 	.subtext {
 		font-size: 1rem;
-		margin-bottom: 35px;
+		margin-bottom: 30px;
+	}
+
+	.social-links {
+		display: flex;
+		gap: 20px;
+		justify-content: center;
+		margin-bottom: 30px;
+	}
+
+	.social-link {
+		width: 55px;
+		height: 55px;
+		background: var(--secondary);
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: var(--primary);
+		transition: all 0.3s ease;
+		box-shadow: var(--shadow);
+	}
+
+	.social-link:hover {
+		background: var(--primary);
+		color: var(--white);
+		transform: translateY(-3px);
 	}
 
 	.thank-you-buttons {
