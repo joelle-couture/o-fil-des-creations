@@ -1,11 +1,21 @@
 ---
+import { Image } from 'astro:assets';
+
+// Import des images pour l'optimisation
+import sacAMain from '../assets/img/sac_a_main.jpg';
+import tissu from '../assets/img/tissu.jpg';
+import coussin from '../assets/img/coussin.jpg';
+import pochette from '../assets/img/pochette.jpg';
+import tablier from '../assets/img/tablier.jpg';
+import housse from '../assets/img/housse.jpg';
+
 const creations = [
-  { id: 1, title: "Sac à main", category: "Accessoires", emoji: "👜", image: "/img/sac_a_main.jpg" },
-  { id: 2, title: "Trousse de toilette", category: "Accessoires", emoji: "💄", image: "/img/tissu.jpg" },
-  { id: 3, title: "Coussin décoratif", category: "Décoration", emoji: "🛋️", image: "/img/coussin.jpg" },
-  { id: 4, title: "Pochette", category: "Accessoires", emoji: "👝", image: "/img/pochette.jpg" },
-  { id: 5, title: "Tablier cuisine", category: "Cuisine", emoji: "👨‍🍳", image: "/img/tablier.jpg" },
-  { id: 6, title: "Housse de coussin", category: "Décoration", emoji: "✨", image: "/img/housse.jpg" },
+  { id: 1, title: "Sac à main", category: "Accessoires", emoji: "👜", image: sacAMain },
+  { id: 2, title: "Trousse de toilette", category: "Accessoires", emoji: "💄", image: tissu },
+  { id: 3, title: "Coussin décoratif", category: "Décoration", emoji: "🛋️", image: coussin },
+  { id: 4, title: "Pochette", category: "Accessoires", emoji: "👝", image: pochette },
+  { id: 5, title: "Tablier cuisine", category: "Cuisine", emoji: "👨‍🍳", image: tablier },
+  { id: 6, title: "Housse de coussin", category: "Décoration", emoji: "✨", image: housse },
 ];
 
 const categories = ["Tous", "Accessoires", "Décoration", "Cuisine"];
@@ -33,7 +43,15 @@ const categories = ["Tous", "Accessoires", "Décoration", "Cuisine"];
         <div class="gallery-item" data-category={creation.category.toLowerCase()}>
           {creation.image ? (
             <div class="item-image has-image">
-              <img src={creation.image} alt={creation.title} loading="lazy" />
+              <Image 
+                src={creation.image} 
+                alt={creation.title} 
+                width={400} 
+                height={320}
+                format="webp"
+                quality={80}
+                loading="lazy"
+              />
             </div>
           ) : (
             <div class="item-image">

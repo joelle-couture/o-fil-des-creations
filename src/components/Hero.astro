@@ -1,5 +1,6 @@
 ---
-
+import { Image } from 'astro:assets';
+import coutureImg from '../assets/img/couture.jpg';
 ---
 
 <section id="accueil" class="hero">
@@ -38,7 +39,15 @@
     <div class="hero-visual">
       <div class="hero-image-wrapper">
         <div class="hero-shape"></div>
-        <img src="/img/couture.jpg" alt="Création couture de Joëlle" class="hero-image" />
+        <Image 
+          src={coutureImg} 
+          alt="Création couture de Joëlle" 
+          class="hero-image"
+          width={500}
+          height={450}
+          format="webp"
+          quality={85}
+        />
       </div>
       <div class="floating-elements">
         <span class="floating-item" style="--delay: 0s">✂️</span>
