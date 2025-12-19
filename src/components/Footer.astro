@@ -7,8 +7,8 @@ const currentYear = new Date().getFullYear();
     <div class="footer-content">
       <div class="footer-brand">
         <a href="/" class="footer-logo">
-          <img src="/logo.jpeg" alt="O fil des créations" class="footer-logo-img" />
-          <span class="logo-text">O fil des créations</span>
+          <img src="/logo.jpeg" alt="O fil des créations de Joëlle" class="footer-logo-img" />
+          <span class="logo-text">O fil des créations <span class="logo-subtitle">de Joëlle</span></span>
         </a>
         <p class="footer-description">
           Créations artisanales uniques par Joëlle, cousues avec amour et passion. 
@@ -92,6 +92,12 @@ const currentYear = new Date().getFullYear();
     color: rgba(255, 255, 255, 0.7);
     line-height: 1.8;
     font-size: 0.95rem;
+  }
+
+  .logo-subtitle {
+    font-size: 0.8rem;
+    color: var(--primary);
+    font-weight: 500;
   }
 
   .footer-links h4,
