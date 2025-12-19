@@ -6,7 +6,7 @@
 </head>
 <body>
   <!-- Ce formulaire caché permet à Netlify de détecter le formulaire au moment du build -->
-  <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+  <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/merci" hidden>
     <input type="text" name="name" />
     <input type="email" name="email" />
     <select name="subject">
@@ -19,7 +19,7 @@
   </form>
 
   <!-- Formulaire newsletter -->
-  <form name="newsletter" netlify netlify-honeypot="bot-field" hidden>
+  <form name="newsletter" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/merci-newsletter" hidden>
     <input type="email" name="email" />
   </form>
 </body>
