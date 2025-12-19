@@ -1,0 +1,130 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Merci ! | O fil des créations by Joëlle">
+	<Header />
+	<main class="thank-you-page">
+		<div class="container">
+			<div class="thank-you-content">
+				<span class="thank-you-icon">💌</span>
+				<h1>Merci pour votre message !</h1>
+				<p>
+					Votre message a bien été envoyé. Je vous répondrai dès que possible !
+				</p>
+				<p class="subtext">
+					En attendant, n'hésitez pas à me suivre sur les réseaux sociaux 
+					pour découvrir mes dernières créations.
+				</p>
+				<div class="thank-you-buttons">
+					<a href="/" class="btn btn-primary">Retour à l'accueil</a>
+					<a href="https://www.facebook.com/ofildescreationsdejoelle/" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+						Voir sur Facebook
+					</a>
+				</div>
+			</div>
+		</div>
+	</main>
+	<Footer />
+</Layout>
+
+<style>
+	.thank-you-page {
+		min-height: 80vh;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 120px 20px 80px;
+		background: linear-gradient(135deg, var(--light) 0%, var(--secondary) 100%);
+	}
+
+	.thank-you-content {
+		text-align: center;
+		max-width: 600px;
+		background: var(--white);
+		padding: 60px 40px;
+		border-radius: 30px;
+		box-shadow: var(--shadow-lg);
+	}
+
+	.thank-you-icon {
+		font-size: 4rem;
+		display: block;
+		margin-bottom: 20px;
+	}
+
+	h1 {
+		font-family: 'Playfair Display', serif;
+		font-size: 2.5rem;
+		color: var(--dark);
+		margin-bottom: 20px;
+	}
+
+	p {
+		color: var(--accent);
+		font-size: 1.1rem;
+		line-height: 1.7;
+		margin-bottom: 15px;
+	}
+
+	.subtext {
+		font-size: 1rem;
+		margin-bottom: 35px;
+	}
+
+	.thank-you-buttons {
+		display: flex;
+		gap: 15px;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+
+	.btn {
+		display: inline-block;
+		padding: 14px 32px;
+		border-radius: 50px;
+		font-weight: 500;
+		font-size: 0.95rem;
+		transition: all 0.3s ease;
+		cursor: pointer;
+		border: none;
+		text-decoration: none;
+	}
+
+	.btn-primary {
+		background: var(--primary);
+		color: var(--white);
+	}
+
+	.btn-primary:hover {
+		background: var(--primary-dark);
+		transform: translateY(-2px);
+	}
+
+	.btn-outline {
+		background: transparent;
+		border: 2px solid var(--primary);
+		color: var(--primary);
+	}
+
+	.btn-outline:hover {
+		background: var(--primary);
+		color: var(--white);
+	}
+
+	@media (max-width: 600px) {
+		.thank-you-content {
+			padding: 40px 25px;
+		}
+
+		h1 {
+			font-size: 1.8rem;
+		}
+
+		.thank-you-buttons {
+			flex-direction: column;
+		}
+	}
+</style>

@@ -1,0 +1,212 @@
+---
+
+---
+
+<section id="apropos" class="about section">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-image">
+        <div class="image-frame">
+          <div class="about-placeholder">
+            <span class="placeholder-icon">👩‍🎨</span>
+            <span class="placeholder-text">Photo portrait</span>
+          </div>
+        </div>
+        <div class="experience-badge">
+          <span class="exp-number">Coup de</span>
+          <span class="exp-text">cœur ❤️</span>
+        </div>
+      </div>
+      
+      <div class="about-content">
+        <span class="section-badge">À propos</span>
+        <h2 class="about-title">Un coup de cœur devenu passion</h2>
+        <p class="about-text">
+          Bonjour, je suis Joëlle ! Il y a quelques années, j'ai découvert 
+          la couture et ça a été un véritable coup de cœur. Ce qui a commencé 
+          comme une simple curiosité est devenu une passion dévorante.
+        </p>
+        <p class="about-text">
+          Mon défi aujourd'hui ? Vous faire découvrir mon univers créatif ! 
+          Plus qu'une simple activité, c'est un moyen pour moi de partager 
+          ma passion et de créer des pièces uniques qui racontent une histoire.
+        </p>
+        
+        <div class="about-features">
+          <div class="feature">
+            <span class="feature-icon">�</span>
+            <div>
+              <h4>Un univers à découvrir</h4>
+              <p>Explorez mes créations et laissez-vous inspirer</p>
+            </div>
+          </div>
+          <div class="feature">
+            <span class="feature-icon">✨</span>
+            <div>
+              <h4>Pièces uniques</h4>
+              <p>Chaque création est réalisée avec soin</p>
+            </div>
+          </div>
+          <div class="feature">
+            <span class="feature-icon">💝</span>
+            <div>
+              <h4>Fait avec amour</h4>
+              <p>La passion dans chaque couture</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .about {
+    background: var(--white);
+  }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 80px;
+    align-items: center;
+  }
+
+  .about-image {
+    position: relative;
+  }
+
+  .image-frame {
+    position: relative;
+  }
+
+  .image-frame::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 100%;
+    height: 100%;
+    border: 3px solid var(--primary);
+    border-radius: 20px;
+    z-index: -1;
+  }
+
+  .about-placeholder {
+    background: linear-gradient(135deg, var(--secondary) 0%, #e8d5c4 100%);
+    border-radius: 20px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    border: 3px dashed var(--primary);
+  }
+
+  .placeholder-icon {
+    font-size: 4rem;
+  }
+
+  .placeholder-text {
+    color: var(--accent);
+    font-weight: 500;
+  }
+
+  .experience-badge {
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    background: var(--primary);
+    color: var(--white);
+    padding: 25px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: var(--shadow-lg);
+  }
+
+  .exp-number {
+    display: block;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+  }
+
+  .exp-text {
+    font-size: 0.85rem;
+    opacity: 0.9;
+  }
+
+  .section-badge {
+    display: inline-block;
+    background: var(--secondary);
+    color: var(--primary);
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+
+  .about-title {
+    font-size: 2.5rem;
+    margin-bottom: 25px;
+    color: var(--dark);
+  }
+
+  .about-text {
+    color: var(--accent);
+    font-size: 1.05rem;
+    margin-bottom: 20px;
+    line-height: 1.8;
+  }
+
+  .about-features {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .feature {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .feature-icon {
+    font-size: 2rem;
+    background: var(--secondary);
+    padding: 15px;
+    border-radius: 15px;
+  }
+
+  .feature h4 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: var(--dark);
+  }
+
+  .feature p {
+    color: var(--accent);
+    font-size: 0.95rem;
+  }
+
+  @media (max-width: 968px) {
+    .about-grid {
+      grid-template-columns: 1fr;
+      gap: 50px;
+    }
+
+    .about-image {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    .about-placeholder {
+      height: 350px;
+    }
+  }
+</style>

@@ -1,0 +1,251 @@
+---
+
+---
+
+<section id="accueil" class="hero">
+  <div class="hero-bg"></div>
+  <div class="container">
+    <div class="hero-content">
+      <span class="hero-badge">✨ Artisanat & Passion</span>
+      <h1 class="hero-title">
+        Bienvenue dans <span class="highlight">mon univers</span><br>
+        créatif
+      </h1>
+      <p class="hero-text">
+        Je suis Joëlle, et la couture est devenue ma passion il y a quelques années. 
+        Un véritable coup de cœur ! Mon défi : vous faire découvrir mon univers 
+        et partager avec vous cette passion pour les créations uniques faites main.
+      </p>
+      <div class="hero-buttons">
+        <a href="#creations" class="btn btn-primary">Voir mes créations</a>
+        <a href="#contact" class="btn btn-outline">Me contacter</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-number">❤️</span>
+          <span class="stat-label">Coup de cœur</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">100%</span>
+          <span class="stat-label">Fait main</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">✨</span>
+          <span class="stat-label">Pièces uniques</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-image-wrapper">
+        <div class="hero-shape"></div>
+        <div class="hero-placeholder">
+          <span class="placeholder-icon">🧵</span>
+          <span class="placeholder-text">Votre image ici</span>
+        </div>
+      </div>
+      <div class="floating-elements">
+        <span class="floating-item" style="--delay: 0s">✂️</span>
+        <span class="floating-item" style="--delay: 1s">🧶</span>
+        <span class="floating-item" style="--delay: 2s">🪡</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    padding-top: 80px;
+  }
+
+  .hero-bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--secondary) 0%, rgba(212, 165, 116, 0.2) 100%);
+    clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%);
+    z-index: -1;
+  }
+
+  .hero .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+  }
+
+  .hero-badge {
+    display: inline-block;
+    background: var(--secondary);
+    color: var(--accent);
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+
+  .hero-title {
+    font-size: 3.5rem;
+    line-height: 1.2;
+    margin-bottom: 25px;
+    color: var(--dark);
+  }
+
+  .highlight {
+    color: var(--primary);
+    position: relative;
+  }
+
+  .highlight::after {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    width: 100%;
+    height: 12px;
+    background: rgba(212, 165, 116, 0.3);
+    z-index: -1;
+    border-radius: 2px;
+  }
+
+  .hero-text {
+    font-size: 1.15rem;
+    color: var(--accent);
+    margin-bottom: 35px;
+    line-height: 1.8;
+  }
+
+  .hero-buttons {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 50px;
+  }
+
+  .hero-stats {
+    display: flex;
+    gap: 40px;
+  }
+
+  .stat {
+    text-align: center;
+  }
+
+  .stat-number {
+    display: block;
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary);
+  }
+
+  .stat-label {
+    font-size: 0.85rem;
+    color: var(--accent);
+  }
+
+  .hero-visual {
+    position: relative;
+  }
+
+  .hero-image-wrapper {
+    position: relative;
+  }
+
+  .hero-shape {
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    width: 100%;
+    height: 100%;
+    background: var(--primary);
+    border-radius: 30px;
+    opacity: 0.2;
+  }
+
+  .hero-placeholder {
+    position: relative;
+    background: linear-gradient(135deg, var(--secondary) 0%, #e8d5c4 100%);
+    border-radius: 30px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    border: 3px dashed var(--primary);
+  }
+
+  .placeholder-icon {
+    font-size: 4rem;
+  }
+
+  .placeholder-text {
+    color: var(--accent);
+    font-weight: 500;
+  }
+
+  .floating-elements {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+
+  .floating-item {
+    position: absolute;
+    font-size: 2rem;
+    animation: float 4s ease-in-out infinite;
+    animation-delay: var(--delay);
+  }
+
+  .floating-item:nth-child(1) { top: 10%; left: -10%; }
+  .floating-item:nth-child(2) { top: 60%; right: -5%; }
+  .floating-item:nth-child(3) { bottom: 10%; left: 20%; }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(10deg); }
+  }
+
+  @media (max-width: 968px) {
+    .hero .container {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+
+    .hero-title {
+      font-size: 2.5rem;
+    }
+
+    .hero-buttons {
+      justify-content: center;
+    }
+
+    .hero-stats {
+      justify-content: center;
+    }
+
+    .hero-visual {
+      order: -1;
+    }
+
+    .hero-placeholder {
+      height: 300px;
+    }
+
+    .hero-bg {
+      width: 100%;
+      clip-path: none;
+      opacity: 0.5;
+    }
+  }
+</style>
