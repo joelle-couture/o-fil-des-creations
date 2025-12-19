@@ -38,10 +38,7 @@
     <div class="hero-visual">
       <div class="hero-image-wrapper">
         <div class="hero-shape"></div>
-        <div class="hero-placeholder">
-          <span class="placeholder-icon">🧵</span>
-          <span class="placeholder-text">Votre image ici</span>
-        </div>
+        <img src="/img/couture.jpg" alt="Création couture de Joëlle" class="hero-image" />
       </div>
       <div class="floating-elements">
         <span class="floating-item" style="--delay: 0s">✂️</span>
@@ -180,6 +177,15 @@
     justify-content: center;
     gap: 15px;
     border: 3px dashed var(--primary);
+  }
+
+  .hero-image {
+    position: relative;
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 30px;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
   }
 
   .placeholder-icon {

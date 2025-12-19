@@ -1,11 +1,11 @@
 ---
 const creations = [
-  { id: 1, title: "Sac à main", category: "Accessoires", emoji: "👜", image: "/img/tissu.jpg" },
-  { id: 2, title: "Trousse de toilette", category: "Accessoires", emoji: "💄", image: null },
-  { id: 3, title: "Coussin décoratif", category: "Décoration", emoji: "🛋️", image: null },
-  { id: 4, title: "Pochette", category: "Accessoires", emoji: "👝", image: null },
-  { id: 5, title: "Tablier cuisine", category: "Cuisine", emoji: "👨‍🍳", image: null },
-  { id: 6, title: "Housse de coussin", category: "Décoration", emoji: "✨", image: null },
+  { id: 1, title: "Sac à main", category: "Accessoires", emoji: "👜", image: "/img/sac_a_main.jpg" },
+  { id: 2, title: "Trousse de toilette", category: "Accessoires", emoji: "💄", image: "/img/tissu.jpg" },
+  { id: 3, title: "Coussin décoratif", category: "Décoration", emoji: "🛋️", image: "/img/coussin.jpg" },
+  { id: 4, title: "Pochette", category: "Accessoires", emoji: "👝", image: "/img/pochette.jpg" },
+  { id: 5, title: "Tablier cuisine", category: "Cuisine", emoji: "👨‍🍳", image: "/img/tablier.jpg" },
+  { id: 6, title: "Housse de coussin", category: "Décoration", emoji: "✨", image: "/img/housse.jpg" },
 ];
 
 const categories = ["Tous", "Accessoires", "Décoration", "Cuisine"];
@@ -52,12 +52,18 @@ const categories = ["Tous", "Accessoires", "Décoration", "Cuisine"];
     <div class="gallery-cta">
       <p>Envie d'en voir plus ? Suivez-moi sur les réseaux !</p>
       <div class="gallery-cta-buttons">
-        <a href="https://www.facebook.com/ofildescreationsdejoelle/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-          <span class="btn-icon">📘</span> Facebook
-        </a>
-        <a href="https://www.instagram.com/o_fil_des_creations_de_joelle/" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
-          <span class="btn-icon">📸</span> Instagram
-        </a>
+        <a href="https://www.facebook.com/ofildescreationsdejoelle/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Facebook">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+            </svg>
+          </a>
+          <a href="https://www.instagram.com/o_fil_des_creations_de_joelle/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="2"/>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" fill="none" stroke="currentColor" stroke-width="2"/>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </a>
       </div>
     </div>
   </div>
