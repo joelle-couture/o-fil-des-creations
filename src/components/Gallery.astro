@@ -1,11 +1,11 @@
 ---
 const creations = [
-  { id: 1, title: "Sac à main", category: "Accessoires", emoji: "👜" },
-  { id: 2, title: "Trousse de toilette", category: "Accessoires", emoji: "💄" },
-  { id: 3, title: "Coussin décoratif", category: "Décoration", emoji: "🛋️" },
-  { id: 4, title: "Pochette", category: "Accessoires", emoji: "👝" },
-  { id: 5, title: "Tablier cuisine", category: "Cuisine", emoji: "👨‍🍳" },
-  { id: 6, title: "Housse de coussin", category: "Décoration", emoji: "✨" },
+  { id: 1, title: "Sac à main", category: "Accessoires", emoji: "👜", image: "/img/tissu.jpg" },
+  { id: 2, title: "Trousse de toilette", category: "Accessoires", emoji: "💄", image: null },
+  { id: 3, title: "Coussin décoratif", category: "Décoration", emoji: "🛋️", image: null },
+  { id: 4, title: "Pochette", category: "Accessoires", emoji: "👝", image: null },
+  { id: 5, title: "Tablier cuisine", category: "Cuisine", emoji: "👨‍🍳", image: null },
+  { id: 6, title: "Housse de coussin", category: "Décoration", emoji: "✨", image: null },
 ];
 
 const categories = ["Tous", "Accessoires", "Décoration", "Cuisine"];
@@ -31,14 +31,19 @@ const categories = ["Tous", "Accessoires", "Décoration", "Cuisine"];
     <div class="gallery-grid">
       {creations.map((creation) => (
         <div class="gallery-item" data-category={creation.category.toLowerCase()}>
-          <div class="item-image">
-            <span class="item-emoji">{creation.emoji}</span>
-            <span class="item-placeholder">Photo à ajouter</span>
-          </div>
+          {creation.image ? (
+            <div class="item-image has-image">
+              <img src={creation.image} alt={creation.title} loading="lazy" />
+            </div>
+          ) : (
+            <div class="item-image">
+              <span class="item-emoji">{creation.emoji}</span>
+              <span class="item-placeholder">Photo à ajouter</span>
+            </div>
+          )}
           <div class="item-overlay">
             <span class="item-category">{creation.category}</span>
             <h3 class="item-title">{creation.title}</h3>
-            <button class="item-btn">Voir plus</button>
           </div>
         </div>
       ))}
@@ -46,7 +51,14 @@ const categories = ["Tous", "Accessoires", "Décoration", "Cuisine"];
 
     <div class="gallery-cta">
       <p>Envie d'en voir plus ? Suivez-moi sur les réseaux !</p>
-      <a href="https://www.facebook.com/ofildescreationsdejoelle/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Voir sur Facebook</a>
+      <div class="gallery-cta-buttons">
+        <a href="https://www.facebook.com/ofildescreationsdejoelle/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+          <span class="btn-icon">📘</span> Facebook
+        </a>
+        <a href="https://www.instagram.com/o_fil_des_creations_de_joelle/" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+          <span class="btn-icon">📸</span> Instagram
+        </a>
+      </div>
     </div>
   </div>
 </section>
@@ -126,6 +138,23 @@ const categories = ["Tous", "Accessoires", "Décoration", "Cuisine"];
     border-radius: 20px;
   }
 
+  .item-image.has-image {
+    border: none;
+    background: none;
+  }
+
+  .item-image.has-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    transition: transform 0.3s ease;
+  }
+
+  .gallery-item:hover .item-image.has-image img {
+    transform: scale(1.05);
+  }
+
   .item-emoji {
     font-size: 4rem;
   }
@@ -143,12 +172,14 @@ const categories = ["Tous", "Accessoires", "Décoration", "Cuisine"];
     padding: 25px;
     background: linear-gradient(to top, rgba(44, 36, 32, 0.95) 0%, transparent 100%);
     color: var(--white);
-    transform: translateY(60px);
-    transition: transform 0.3s ease;
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all 0.3s ease;
   }
 
   .gallery-item:hover .item-overlay {
     transform: translateY(0);
+    opacity: 1;
   }
 
   .item-category {
@@ -162,24 +193,7 @@ const categories = ["Tous", "Accessoires", "Décoration", "Cuisine"];
 
   .item-title {
     font-size: 1.3rem;
-    margin-bottom: 15px;
-  }
-
-  .item-btn {
-    background: transparent;
-    border: 2px solid var(--white);
-    color: var(--white);
-    padding: 8px 20px;
-    border-radius: 25px;
-    font-family: 'Poppins', sans-serif;
-    font-size: 0.85rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-
-  .item-btn:hover {
-    background: var(--white);
-    color: var(--dark);
+    margin-bottom: 0;
   }
 
   .gallery-cta {
@@ -194,7 +208,24 @@ const categories = ["Tous", "Accessoires", "Décoration", "Cuisine"];
   .gallery-cta p {
     font-size: 1.2rem;
     color: var(--accent);
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+  }
+
+  .gallery-cta-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .gallery-cta-buttons .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .btn-icon {
+    font-size: 1.1rem;
   }
 
   @media (max-width: 968px) {
@@ -205,6 +236,11 @@ const categories = ["Tous", "Accessoires", "Décoration", "Cuisine"];
 
     .item-image {
       height: 280px;
+    }
+
+    .item-overlay {
+      transform: translateY(0);
+      opacity: 1;
     }
 
     .gallery-cta {
@@ -250,6 +286,16 @@ const categories = ["Tous", "Accessoires", "Décoration", "Cuisine"];
 
     .gallery-cta p {
       font-size: 1rem;
+    }
+
+    .gallery-cta-buttons {
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .gallery-cta-buttons .btn {
+      width: 100%;
+      justify-content: center;
     }
   }
 
